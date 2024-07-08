@@ -1,0 +1,35 @@
+[ 2024-07-09 01:04:17,259 ] 17 root - INFO - creating the pkl file of model and TFIDF matrix to predict the ouput and clean the comment
+[ 2024-07-09 01:04:17,365 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2024-07-09 01:04:17,370 ] 97 werkzeug - INFO -  * Debugger PIN: 113-898-606
+[ 2024-07-09 01:04:57,072 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Jul/2024 01:04:57] "GET / HTTP/1.1" 200 -
+[ 2024-07-09 01:04:57,455 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Jul/2024 01:04:57] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+[ 2024-07-09 01:05:04,850 ] 80 root - INFO - Now Inside Predict Route
+[ 2024-07-09 01:05:04,851 ] 83 root - INFO - Getting review From the user to predict
+[ 2024-07-09 01:05:04,860 ] 86 root - INFO - Applying clean_text Function to the text
+[ 2024-07-09 01:05:04,860 ] 28 root - INFO - inside clean text function
+[ 2024-07-09 01:05:04,861 ] 30 root - INFO - Tokenize the text
+[ 2024-07-09 01:05:04,887 ] 33 root - INFO - Convert text to lowercase
+[ 2024-07-09 01:05:04,887 ] 36 root - INFO - Remove punctuation and special characters from text
+[ 2024-07-09 01:05:04,888 ] 39 root - INFO - Remove stopwords from the text
+[ 2024-07-09 01:05:04,894 ] 43 root - INFO -  Applying Lemmatization to the text
+[ 2024-07-09 01:05:07,734 ] 47 root - INFO - Join tokens back into a string
+[ 2024-07-09 01:05:07,734 ] 50 root - INFO - Returning the clean_text
+[ 2024-07-09 01:05:07,734 ] 89 root - INFO - creating TFIDF Matrix using our PKL file of TFIDF
+[ 2024-07-09 01:05:07,737 ] 92 root - INFO - Getting prediction from by predicting comment using our trained model pickle file
+[ 2024-07-09 01:05:07,740 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Jul/2024 01:05:07] "POST /predict HTTP/1.1" 200 -
+[ 2024-07-09 01:05:07,841 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Jul/2024 01:05:07] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+[ 2024-07-09 01:05:15,840 ] 80 root - INFO - Now Inside Predict Route
+[ 2024-07-09 01:05:15,842 ] 83 root - INFO - Getting review From the user to predict
+[ 2024-07-09 01:05:15,842 ] 86 root - INFO - Applying clean_text Function to the text
+[ 2024-07-09 01:05:15,843 ] 28 root - INFO - inside clean text function
+[ 2024-07-09 01:05:15,843 ] 30 root - INFO - Tokenize the text
+[ 2024-07-09 01:05:15,846 ] 33 root - INFO - Convert text to lowercase
+[ 2024-07-09 01:05:15,846 ] 36 root - INFO - Remove punctuation and special characters from text
+[ 2024-07-09 01:05:15,847 ] 39 root - INFO - Remove stopwords from the text
+[ 2024-07-09 01:05:15,849 ] 43 root - INFO -  Applying Lemmatization to the text
+[ 2024-07-09 01:05:15,850 ] 47 root - INFO - Join tokens back into a string
+[ 2024-07-09 01:05:15,851 ] 50 root - INFO - Returning the clean_text
+[ 2024-07-09 01:05:15,851 ] 89 root - INFO - creating TFIDF Matrix using our PKL file of TFIDF
+[ 2024-07-09 01:05:15,858 ] 92 root - INFO - Getting prediction from by predicting comment using our trained model pickle file
+[ 2024-07-09 01:05:15,860 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Jul/2024 01:05:15] "POST /predict HTTP/1.1" 200 -
+[ 2024-07-09 01:05:15,948 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Jul/2024 01:05:15] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -

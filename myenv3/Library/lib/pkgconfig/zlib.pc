@@ -1,0 +1,13 @@
+prefix=C:/Projects/Web_Projects_college/Sentiment_Analysis_End_to_End_Project/myenv3/Library
+exec_prefix=C:/Projects/Web_Projects_college/Sentiment_Analysis_End_to_End_Project/myenv3/Library
+libdir=C:/Projects/Web_Projects_college/Sentiment_Analysis_End_to_End_Project/myenv3/Library/lib
+sharedlibdir=C:/Projects/Web_Projects_college/Sentiment_Analysis_End_to_End_Project/myenv3/Library/lib
+includedir=C:/Projects/Web_Projects_college/Sentiment_Analysis_End_to_End_Project/myenv3/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

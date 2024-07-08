@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <title>Sentiment Analysis</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("{{ url_for('static', filename='images/background.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .textbox {
+            width: calc(102% - 18px);
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #224658;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #0d11da;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .button:hover {
+            background-color: #4545a0;
+        }
+
+        h1, h2 {
+            font-style: normal;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Enter Your Review</h2>
+        <form action="/predict" method="post">
+            <textarea class="textbox" name="review" placeholder="Enter your review..." rows="4" required></textarea><br>
+            <button type="submit" class="button">Predict Comment</button>
+        </form>
+
+        {% if prediction is defined %}
+            <div class="mt-4">
+                {% if prediction == 1 %}
+                    <div class="alert alert-success" role="alert">Positive comment!</div>
+                {% else %}
+                    <div class="alert alert-danger" role="alert">Negative comment!</div>
+                {% endif %}
+            </div>
+        {% endif %}
+        
+    </div>
+</body>
+
+</html>
+

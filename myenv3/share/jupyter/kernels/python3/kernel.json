@@ -1,0 +1,14 @@
+{
+ "argv": [
+  "c:/Projects/Web_Projects_college/Sentiment_Analysis_End_to_End_Project/myenv3\\python.exe",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "Python 3 (ipykernel)",
+ "language": "python",
+ "metadata": {
+  "debugger": true
+ }
+}
